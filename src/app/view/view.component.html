@@ -1,0 +1,12 @@
+<section class="d-flex flex-column align-items-center">
+    <article>
+        <button class="mt-5" (click)="onOpenAddNewToDoBtnClick()" mat-raised-button color="primary">Add new ToDo</button>
+    </article>
+    <article [ngStyle]="{
+        'width': '50%'
+    }">
+        <app-to-do-list>
+
+        </app-to-do-list>
+    </article>
+</section>

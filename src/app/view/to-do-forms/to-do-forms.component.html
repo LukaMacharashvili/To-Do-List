@@ -1,0 +1,13 @@
+<article [ngStyle]="{
+    'width': '70vh',
+    'display': 'flex',
+    'flex-direction': 'column',
+    'align-items': 'center'
+}">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Enter new To Do</mat-label>
+        <textarea #ToDoInp matInput placeholder="Enter here"></textarea>
+    </mat-form-field>
+    <br>
+    <button (click)="onNewToDoAddBtnClick(ToDoInp.value)" mat-raised-button color="primary">Add</button>
+</article>
