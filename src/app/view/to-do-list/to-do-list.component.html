@@ -1,10 +1,14 @@
 <div cdkDropListGroup>
     <div class="example-container">
-        <h2>To do App</h2>
+        <h2 [ngStyle]="{
+            'color': 'white'
+        }">To do App</h2>
         <div cdkDropList [cdkDropListData]="todo" class="example-list" (cdkDropListDropped)="drop($event)">
             <div #toDoItem class="example-box" *ngFor="let item of todo; let i = index" cdkDrag>
                 <div class="example-text">{{item | slice:0:30}}...</div>
-                <button mat-button [matMenuTriggerFor]="menu"><i class="fa-solid fa-ellipsis"></i></button>
+                <button mat-button [matMenuTriggerFor]="menu"><i [ngStyle]="{
+                    'color': 'rgb(31,184,248)'
+                }" class="fa-solid fa-ellipsis"></i></button>
                 <mat-menu #menu="matMenu">
                     <button (click)="onToDoSeeDetailsBtnClick(i)" mat-menu-item>Details</button>
                     <button (click)="onToDoItem(i)" mat-menu-item>Delete</button>
@@ -14,11 +18,15 @@
     </div>
 
     <div class="example-container">
-        <h2>Done</h2>
+        <h2 [ngStyle]="{
+            'color': 'white'
+        }">Done</h2>
         <div cdkDropList [cdkDropListData]="done" class="example-list" (cdkDropListDropped)="drop($event)">
             <div #doneItem class="example-box" *ngFor="let item of done; let i = index" cdkDrag>
                 <div class="example-text">{{item | slice:0:30}}...</div>
-                <button mat-button [matMenuTriggerFor]="menu"><i class="fa-solid fa-ellipsis"></i></button>
+                <button mat-button [matMenuTriggerFor]="menu"><i [ngStyle]="{
+                    'color': 'rgb(31,184,248)'
+                }" class="fa-solid fa-ellipsis"></i></button>
                 <mat-menu #menu="matMenu">
                     <button (click)="onDoneSeeDetailsBtnClick(i)" mat-menu-item>Details</button>
                     <button (click)="onDoneItem(i)" mat-menu-item>Delete</button>

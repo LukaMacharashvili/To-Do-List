@@ -9,5 +9,7 @@
         <textarea #ToDoInp matInput placeholder="Enter here"></textarea>
     </mat-form-field>
     <br>
-    <button (click)="onNewToDoAddBtnClick(ToDoInp.value)" mat-raised-button color="primary">Add</button>
+    <button [ngStyle]="{
+        'background-color': 'rgb(31,184,248)'
+    }" (click)="onNewToDoAddBtnClick(ToDoInp.value)" mat-raised-button color="primary">Add</button>
 </article>
